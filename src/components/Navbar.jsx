@@ -1,8 +1,13 @@
 import React from 'react'
+import {Button }from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Navbar = () => {
   return (
-    <div>Navbar</div>
+    <div>
+      <Button>Test Button</Button>
+    </div>
+    
   )
 }
 

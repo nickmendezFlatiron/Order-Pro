@@ -1,13 +1,17 @@
 import React from "react";
-import Navbar from "./components/Navbar";
+import {Route , Switch} from 'react-router-dom'
+import Navigation from "./components/Navigation";
+
+
+import { Container } from "react-bootstrap";
 
 
 const App = () => {
   return (
-    <div >
-    <Navbar />
-    <h1>Hello World</h1>
-    </div>
+      <Container>
+      <Navigation />
+      <h1>Hello World</h1>
+      </Container>
   );
 }
 

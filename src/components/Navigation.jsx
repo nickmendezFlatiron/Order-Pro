@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Navbar , Nav , Container}from 'react-bootstrap';
+import { Navbar , Nav , Container , Image}from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const Navigation = () => {
 
   return (
-    <div>
+    
       <Navbar bg="info" variant="light" >
     <Container >
       <h3>Order Pro</h3>
@@ -18,7 +18,7 @@ const Navigation = () => {
       </Nav>
     </Container>
   </Navbar>
-    </div>
+    
     
   )
 }

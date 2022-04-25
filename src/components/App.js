@@ -10,7 +10,7 @@ import HomePage from "./HomePage";
 
 const App = () => {
   return (
-      <Container>
+      <React.Fragment>
         <Navigation />
         <Switch>
           <Route exact path="/orders">
@@ -23,7 +23,7 @@ const App = () => {
             <HomePage />
           </Route>
         </Switch>
-      </Container>
+      </React.Fragment>
   );
 }
 

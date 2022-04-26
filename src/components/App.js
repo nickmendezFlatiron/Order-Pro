@@ -2,8 +2,8 @@ import React from "react";
 import { Route , Switch } from "react-router-dom";
 
 import Navigation from "./Navigation";
-import Orders from "./Orders";
-import OrderForm from "./OrderForm";
+import Orders from "./orders-table/Orders";
+import OrderForm from "./order-form/OrderForm";
 import HomePage from "./HomePage";
 
 import logo from '../assets/logo.png';

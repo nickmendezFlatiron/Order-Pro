@@ -1,8 +1,12 @@
 import React from "react";
+import SearchBar from "./SearchBar";
 
 const Orders = () => {
   return (
-    <div>Orders</div>
+    <div>
+      <SearchBar />  
+    </div>
+    
   )
 }
 

@@ -1,3 +1,16 @@
 {
-  "orders" : []
+  "orders" : [
+    {
+      "name" : "Johnie Boy",
+      "email" : "john@email.com" ,
+      "date" : "12/2/22" ,
+      "number" : 1003 ,
+      "items" : {
+          "item_1" : "shoes",
+          "item_2" : "t shirt" ,
+          "item_3" : "socks"
+      } ,
+      "id" : 1
+    }
+  ]
 }

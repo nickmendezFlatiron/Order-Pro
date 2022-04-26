@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Navbar , Nav , Container , Image}from 'react-bootstrap';
+import { Navbar , Nav , Container }from 'react-bootstrap';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+import logo from '../assets/logo.png';
+import "../src/App.css"
 
 
 const Navigation = () => {
@@ -10,7 +13,7 @@ const Navigation = () => {
     
       <Navbar bg="info" variant="light" >
     <Container >
-      <h3>Order Pro</h3>
+      <img src={logo} alt="logo" />
       <Nav className="justify-content-end">
         <Nav.Link as={Link} to="/" exact>Home</Nav.Link>
         <Nav.Link as={Link} to="/orders"  exact>Orders</Nav.Link>

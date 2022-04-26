@@ -1,17 +1,20 @@
 import React from "react";
 import { Route , Switch } from "react-router-dom";
 
-
 import Navigation from "./Navigation";
 import Orders from "./Orders";
 import OrderForm from "./OrderForm";
 import HomePage from "./HomePage";
 
+import logo from '../assets/logo.png';
+import '../fonts/Cocogoose-Light.ttf'
+import '../fonts/Cocogoose-Ultralight.ttf'
+
 
 const App = () => {
   return (
       <React.Fragment>
-        <Navigation />
+        <Navigation logo={logo}/>
         <Switch>
           <Route exact path="/orders">
             <Orders />
@@ -20,7 +23,7 @@ const App = () => {
             <OrderForm />
           </Route>
           <Route exact path="/">
-            <HomePage />
+            <HomePage logo={logo}/>
           </Route>
         </Switch>
       </React.Fragment>

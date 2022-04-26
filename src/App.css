@@ -1,5 +1,28 @@
+@font-face {
+  font-family: "CocogooseLight";
+  src: local("CocogooseLight") ,
+  url('./fonts/Cocogoose-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "CocogooseUltralight";
+  src: local("CocogooseUltralight") ,
+  url('./fonts/Cocogoose-Ultralight.ttf') format('truetype');
+}
+
 .logo {
-  width: 40px;
+  width: 180px;
   height: auto;
 }
 
+.font-face-cl {
+  font-family: "CocogooseLight";
+}
+
+.font-face-cul {
+  font-family: "CocogooseUltralight";
+}
+
+.grey-bg {
+  background-color: rgba(152, 152, 152, 0.213);
+}

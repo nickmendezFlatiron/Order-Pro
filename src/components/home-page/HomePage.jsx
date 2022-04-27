@@ -2,6 +2,7 @@ import React from 'react';
 import {Container ,Row , Col ,Image , Button} from 'react-bootstrap';
 import {Link} from 'react-router-dom'
 import shipping from '../../assets/shipping.jpg'
+import SellingPoints from './SellingPoints' 
 
 
 
@@ -23,6 +24,7 @@ const HomePage = ({logo}) => {
           </main>
         </Col>
       </Row>
+      <SellingPoints />
     </Container>
 
   )

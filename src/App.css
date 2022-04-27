@@ -39,3 +39,7 @@
 thead th {
   font-size: 22px;
 }
+
+tr.fulfilled {
+  color: rgba(92, 92, 92, 0.852);
+}

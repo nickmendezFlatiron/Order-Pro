@@ -17,7 +17,7 @@ const OrderTable = ({orders , setOrders}) => {
           <th>Date</th>
           <th>Customer</th>
           <th>Items</th>
-          <th>Fulfillment</th>
+          <th>Status</th>
         </thead>
         <tbody>
           {tableRows}

@@ -1,56 +1,56 @@
 {
-  "orders" : [
+  "orders": [
     {
-      "name" : "Johnie Boy",
-      "email" : "john@email.com" ,
-      "date" : "1/2/22" ,
-      "number" : 1003 ,
-      "items" : {
-          "item_1" : "shoes",
-          "item_2" : "t shirt" ,
-          "item_3" : "socks"
-      } ,
-      "fulfilled" : false ,
-      "id" : 1
-    } ,
+      "name": "Johnie Boy",
+      "email": "john@email.com",
+      "date": "1/2/22",
+      "number": 1003,
+      "items": {
+        "item_1": "shoes",
+        "item_2": "t shirt",
+        "item_3": "socks"
+      },
+      "fulfilled": false,
+      "id": 1
+    },
     {
-      "name" : "Good Boy",
-      "email" : "good@email.com" ,
-      "date" : "1/22/22" ,
-      "number" : 1004 ,
-      "items" : {
-          "item_1" : "slippers",
-          "item_2" : "shorts" ,
-          "item_3" : "gym bag"
-      } ,
-      "fulfilled" : true ,
-      "id" : 2
-    } ,
+      "name": "Good Boy",
+      "email": "good@email.com",
+      "date": "1/22/22",
+      "number": 1004,
+      "items": {
+        "item_1": "slippers",
+        "item_2": "shorts",
+        "item_3": "gym bag"
+      },
+      "fulfilled": false,
+      "id": 2
+    },
     {
-      "name" : "Aim Mee",
-      "email" : "amy@email.com" ,
-      "date" : "3/03/22" ,
-      "number" : 1005 ,
-      "items" : {
-          "item_1" : "tea",
-          "item_2" : "crumpets" 
-      } ,
-      "fulfilled" : true ,
-      "id" : 3
-    } ,
+      "name": "Aim Mee",
+      "email": "amy@email.com",
+      "date": "3/03/22",
+      "number": 1005,
+      "items": {
+        "item_1": "tea",
+        "item_2": "crumpets"
+      },
+      "fulfilled": true,
+      "id": 3
+    },
     {
-      "name" : "Jimmy Jon",
-      "email" : "jimmy@email.com" ,
-      "date" : "3/12/22" ,
-      "number" : 1006 ,
-      "items" : {
-          "item_1" : "socks",
-          "item_2" : "boba tea" ,
-          "item_3" : "greeting card" ,
-          "item_4" : "teddy bear"
-      } ,
-      "fulfilled" : false ,
-      "id" : 4
+      "name": "Jimmy Jon",
+      "email": "jimmy@email.com",
+      "date": "3/12/22",
+      "number": 1006,
+      "items": {
+        "item_1": "socks",
+        "item_2": "boba tea",
+        "item_3": "greeting card",
+        "item_4": "teddy bear"
+      },
+      "fulfilled": true,
+      "id": 4
     }
   ]
 }

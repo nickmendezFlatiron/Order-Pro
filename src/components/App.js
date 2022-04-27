@@ -2,7 +2,7 @@ import React from "react";
 import { Route , Switch } from "react-router-dom";
 
 import Navigation from "./Navigation";
-import Orders from "./orders-table/Orders";
+import Orders from "./order-page/Orders";
 import OrderForm from "./order-form/OrderForm";
 import HomePage from "./HomePage";
 

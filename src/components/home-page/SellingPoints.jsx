@@ -6,7 +6,10 @@ const SellingPoints = () => {
     <Container>
       <Row className="text-center">
         <Col sm={4} >
-          
+          <div>
+      
+          </div>
+       
           <p>Some Text</p>
         </Col>
         <Col sm={4}>

@@ -2,7 +2,9 @@ import React from 'react'
 
 const TableRow = ({order}) => {
 
-  const {name , date , number , items} = order
+  const {name , date , number , items , fulfilled , id} = order
+
+  
 
   const itemCount = Object.keys(items).length
   return (
@@ -12,8 +14,8 @@ const TableRow = ({order}) => {
       <td>{name}</td>
       <td>{itemCount} Items</td>
       <td>
-        <input type="checkbox">
-        </input>
+        <input type="checkbox" id={`${id}-check`} checked={fulfilled}></input> &nbsp;
+        <label for={`${id}-check`}> {fulfilled ? "Fulfilled" : 'Unfulfilled'}</label>
       </td>
     </tr>
   )

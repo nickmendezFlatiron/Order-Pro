@@ -29,6 +29,7 @@ const App = () => {
           <Navigation logo={logo}/>
           <Switch>
             <Route exact path="/orders">
+              {/* use children prop to reduce prop drilling */}
               <Orders>
                 <SearchBar orders={orders} />  
                 <OrderTable orders={orders} />

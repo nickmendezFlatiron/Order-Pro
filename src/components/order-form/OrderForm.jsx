@@ -59,7 +59,7 @@ const OrderForm = ({orders , setOrders }) => {
       <div className="my-5 py-3">
         <h1 className="font-60 text-center font-face-cl bg-light bg-opacity-50 text-black" id="new-order"><strong>NEW ORDER</strong></h1>
       </div>
-      <Form className="mx-auto w-75 shadow rounded-3 bg-light bg-opacity-75">
+      <Form className="mx-auto w-75 shadow rounded-3 bg-light bg-opacity-75" onSubmit={handleSubmit}>
         <Row className="my-3">
           <Col className="mt-2">
             <Form.Group controlId="formCustomerName">
@@ -97,7 +97,7 @@ const OrderForm = ({orders , setOrders }) => {
           </Col>
         </Row>
         <div className="d-flex justify-content-center my-3">
-         <Button variant="info" type="submit" className="mb-3 text-secondary" onSubmit={)(handleSubmit}>Create Order</Button>
+         <Button variant="info" type="submit" className="mb-3 text-secondary" >Create Order</Button>
         </div>
       </Form>
     </Container>

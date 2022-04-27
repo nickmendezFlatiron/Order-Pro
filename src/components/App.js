@@ -32,7 +32,7 @@ const App = () => {
               {/* use children prop to reduce prop drilling */}
               <Orders>
                 <SearchBar orders={orders} />  
-                <OrderTable orders={orders} />
+                <OrderTable orders={orders} setOrders={setOrders} url={url}/>
               </Orders>
             </Route>
             <Route exact path="/create-order">

@@ -4,7 +4,7 @@ import { Route , Switch } from "react-router-dom";
 import Navigation from "./Navigation";
 import Orders from "./order-page/Orders";
 import OrderForm from "./order-form/OrderForm";
-import HomePage from "./HomePage";
+import HomePage from "./home-page/HomePage";
 
 import logo from '../assets/logo.png';
 import '../fonts/Cocogoose-Light.ttf'

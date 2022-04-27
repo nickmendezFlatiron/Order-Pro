@@ -34,8 +34,8 @@ const OrderTable = () => {
 
   return (
     <Container>
-      <Table bordered hover className="my-3">
-        <thead>
+      <Table hover className="my-3 bordered shadow-sm">
+        <thead className="mt-3">
           <th>Order #</th>
           <th>Date</th>
           <th>Customer</th>

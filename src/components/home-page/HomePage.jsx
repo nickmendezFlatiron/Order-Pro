@@ -1,7 +1,7 @@
 import React from 'react';
 import {Container ,Row , Col ,Image , Button} from 'react-bootstrap';
 import {Link} from 'react-router-dom'
-import shipping from '../assets/shipping.jpg'
+import shipping from '../../assets/shipping.jpg'
 
 
 

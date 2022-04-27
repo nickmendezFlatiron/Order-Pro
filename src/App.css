@@ -35,3 +35,7 @@
 .font-60 {
   font-size: 60px;
 }
+
+thead th {
+  font-size: 22px;
+}

@@ -7,20 +7,23 @@ const TableRow = ({order}) => {
 
   function handleFulfillmentStatus(e) {
     
-  
-    onToggleFulfillment(() => !toggleFulfillment)
+    const isFulfilled = toggleFulfillment ? false : true ;
+    onToggleFulfillment((toggleFulfillment) => !toggleFulfillment)
 
     fetch(`http://localhost:3000/orders/${id}` , {
       method : "PATCH" ,
       headers: { "Content-Type" : 'application/json'} ,
-      body : JSON.stringify({fulfilled : toggleFulfillment})
+      body : JSON.stringify({fulfilled : isFulfilled})
     })
       .then(r => r.json())
+      .then(console.log(toggleFulfillment))
   }
 
-  const rowColor = fulfilled ? "fulfilled" : "unfulfilled" ;
+  const rowColor = toggleFulfillment ? "fulfilled" : "unfulfilled" ;
 
   const itemCount = Object.keys(items).length
+
+
   return (
     <tr className={rowColor}>
       <td>{number}</td>

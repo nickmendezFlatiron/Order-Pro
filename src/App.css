@@ -25,8 +25,8 @@
 }
 
 .formbg {
-  background-image: url('./assets/form.jpg');
-  height: 80vh;
+  background-image: url('./assets/form2.jpg');
+  height: 100%;
   background-size: cover;
   background-position: center;
   
@@ -41,5 +41,6 @@ thead th {
 }
 
 tr.fulfilled {
-  color: rgba(92, 92, 92, 0.852);
+  color: rgba(144, 144, 144, 0.852);
 }
+

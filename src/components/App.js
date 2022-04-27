@@ -36,7 +36,7 @@ const App = () => {
               </Orders>
             </Route>
             <Route exact path="/create-order">
-              <OrderForm />
+              <OrderForm orders={orders} setOrders={setOrders} url={url}/>
             </Route>
             <Route exact path="/">
               <HomePage logo={logo}/>

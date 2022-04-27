@@ -1,4 +1,4 @@
-import React from "react";
+import {React , useState , useEffect , Fragment } from "react";
 import { Route , Switch } from "react-router-dom";
 
 import Navigation from "./Navigation";
@@ -12,21 +12,31 @@ import '../fonts/Cocogoose-Ultralight.ttf'
 
 
 const App = () => {
+
+  const [orders , setOrders] = useState([])
+  const url = 'http://localhost:3000/orders'
+
+  useEffect(() => {
+    fetch(url)
+    .then(r => r.json())
+    .then(orders => setOrders(orders))
+  }, [])
+
   return (
-      <React.Fragment>
-        <Navigation logo={logo}/>
-        <Switch>
-          <Route exact path="/orders">
-            <Orders />
-          </Route>
-          <Route exact path="/create-order">
-            <OrderForm />
-          </Route>
-          <Route exact path="/">
-            <HomePage logo={logo}/>
-          </Route>
-        </Switch>
-      </React.Fragment>
+        <Fragment>
+          <Navigation logo={logo}/>
+          <Switch>
+            <Route exact path="/orders">
+              <Orders orders={orders} />
+            </Route>
+            <Route exact path="/create-order">
+              <OrderForm />
+            </Route>
+            <Route exact path="/">
+              <HomePage logo={logo}/>
+            </Route>
+          </Switch>
+        </Fragment>
   );
 }
 

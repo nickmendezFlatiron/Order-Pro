@@ -4,7 +4,7 @@ import {Container , InputGroup , FormControl } from 'react-bootstrap'
 
 const SearchBar = () => {
   return (
-   <Container className="">
+   <Container>
     <InputGroup size="lg">
       <FormControl aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder='Enter search quiery here...'/>
       <InputGroup.Text id="inputGroup-sizing-lg">

@@ -5,6 +5,8 @@ import Navigation from "./Navigation";
 import Orders from "./order-page/Orders";
 import OrderForm from "./order-form/OrderForm";
 import HomePage from "./home-page/HomePage";
+import OrderTable from "./order-page/OrderTable";
+import SearchBar from "./order-page/SearchBar";
 
 import logo from '../assets/logo.png';
 import '../fonts/Cocogoose-Light.ttf'
@@ -27,7 +29,10 @@ const App = () => {
           <Navigation logo={logo}/>
           <Switch>
             <Route exact path="/orders">
-              <Orders orders={orders} />
+              <Orders>
+                <SearchBar orders={orders} />  
+                <OrderTable orders={orders} />
+              </Orders>
             </Route>
             <Route exact path="/create-order">
               <OrderForm />

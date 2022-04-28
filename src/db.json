@@ -10,7 +10,7 @@
         "2 tables",
         "1 bag of soil"
       ],
-      "fulfilled": true,
+      "fulfilled": false,
       "id": 1
     },
     {
@@ -23,7 +23,7 @@
         "shorts",
         "gym bag"
       ],
-      "fulfilled": true,
+      "fulfilled": false,
       "id": 2
     },
     {
@@ -91,12 +91,11 @@
       "email": "customertest@gmail.com",
       "date": "2022-04-13",
       "number": 1010,
-      "items":  [
-          "3 T shirts ",
-          " 4 Shorts ",
-          " 2 pants"
-        ]
-      ,
+      "items": [
+        "3 T shirts ",
+        " 4 Shorts ",
+        " 2 pants"
+      ],
       "fulfilled": false,
       "id": 8
     }

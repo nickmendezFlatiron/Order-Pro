@@ -18,8 +18,9 @@ const OrderForm = ({orders , setOrders }) => {
   }
 
   function handleDate(event) {
-    setDate(event.target.value)
-    console.log(event)
+  
+  setDate(event.target.value)
+    
   }
 
   function handleItems(event) {

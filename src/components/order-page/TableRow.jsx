@@ -23,11 +23,13 @@ const TableRow = ({order}) => {
 
   const itemCount = Object.keys(items).length
 
+  const splitdate = date.split("-")
+  const newDate = `${splitdate[1]}/${splitdate[2]}/${splitdate[0]}`
 
   return (
     <tr className={rowColor}>
       <td>{number}</td>
-      <td>{date}</td>
+      <td>{newDate}</td>
       <td>{name}</td>
       <td>{itemCount} Items</td>
       <td>

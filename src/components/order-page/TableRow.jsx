@@ -1,4 +1,5 @@
-import {React , useState } from 'react'
+import { React , useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const TableRow = ({order}) => {
 
@@ -28,7 +29,7 @@ const TableRow = ({order}) => {
 
   return (
     <tr className={rowColor}>
-      <td>{number}</td>
+      <td><Link to={`/orders/${number}`}>{number}</Link></td>
       <td>{newDate}</td>
       <td>{name}</td>
       <td>{itemCount} Items</td>

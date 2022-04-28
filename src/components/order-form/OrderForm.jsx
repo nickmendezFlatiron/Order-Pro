@@ -10,11 +10,12 @@ const OrderForm = ({orders , setOrders }) => {
   const [date , setDate] = useState('')
   const [items , setItems] = useState('')
 
-  const lastOrder = orders[orders.length - 1]
+  
 
   useEffect(() =>{
+    const lastOrder = orders[orders.length - 1]
     setOrderNumber(() => lastOrder.number + 1)
-  } ,[])
+  } ,[orders])
   
   function handleName(event){
     setName(event.target.value)

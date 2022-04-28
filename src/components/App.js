@@ -7,10 +7,12 @@ import OrderForm from "./order-form/OrderForm";
 import HomePage from "./home-page/HomePage";
 import OrderTable from "./order-page/OrderTable";
 import SearchBar from "./order-page/SearchBar";
+import OrderNumberPage from "./order-page/OrderNumberPage";
 
 import logo from '../assets/logo.png';
 import '../fonts/Cocogoose-Light.ttf'
 import '../fonts/Cocogoose-Ultralight.ttf'
+
 
 
 const App = () => {
@@ -44,6 +46,7 @@ const App = () => {
             <Route exact path="/">
               <HomePage logo={logo}/>
             </Route>
+            <Route path="/orders/:orderNumber" component={OrderNumberPage} />
           </Switch>
         </Fragment>
   );

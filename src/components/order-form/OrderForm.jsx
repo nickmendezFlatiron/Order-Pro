@@ -1,9 +1,10 @@
-import {React ,  useState , useEffect} from "react";
+import {React ,  useState } from "react";
 import {Form , Container , Col , Row , Button} from 'react-bootstrap'
 
 const OrderForm = ({orders , setOrders }) => {
 
-  const [orderNumber , setOrderNumber] = useState(0)
+  const [orderNumber , setOrderNumber] = useState('')
+  
 
   const [name , setName] = useState('')
   const [email , setEmail] = useState('')
@@ -12,10 +13,6 @@ const OrderForm = ({orders , setOrders }) => {
 
   
 
-  useEffect(() =>{
-    const lastOrder = orders[orders.length - 1]
-    setOrderNumber(() => lastOrder.number + 1)
-  } ,[orders])
   
   function handleName(event){
     setName(event.target.value)
@@ -103,7 +100,7 @@ const OrderForm = ({orders , setOrders }) => {
           <Col  className="mb-2">
             <Form.Group controlId="formOrderItems" className="justify-content-center">
                 <Form.Label >Items Ordered</Form.Label>
-                <Form.Control as="textarea" placeholder="Enter Item here..." value={items} onChange={handleItems}/>
+                <Form.Control as="textarea" placeholder="Separate items with commas ," value={items} onChange={handleItems}/>
               </Form.Group>
           </Col>
         </Row>

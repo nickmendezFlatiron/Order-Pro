@@ -5,13 +5,14 @@ import TableRow from './TableRow'
 
 
 const OrderTable = ({orders , setOrders , search , filter}) => {
-  
+  console.log('table rendered')
 
-  const numberSort = [...orders].sort((a , b) => {return b.number - a.number})
+  const descendingNumbers = [...orders].sort((a , b) => {return b.number - a.number})
+  const ascendingNumbers = [...orders].sort((a , b) => {return a.number - b.number})
   const abcSort = [...orders].sort((a , b) => a.name.localeCompare(b.name))
-  const specialSort = filter === "descending" ? numberSort : abcSort ;
+  const specialSort = filter === "descending" ? descendingNumbers : abcSort ;
 
-  const defaultSort = filter === "default" ? orders : specialSort ;
+  const defaultSort = filter === "default" ? ascendingNumbers : specialSort ;
   
   const searchFilter = defaultSort.filter( order => { 
     const orderString = order.items.join(',')
@@ -21,7 +22,7 @@ const OrderTable = ({orders , setOrders , search , filter}) => {
   ) 
   
   const tableRows = searchFilter.map(order => {
-   return <TableRow order={order} key={order.id} setOrders={setOrders} />
+   return <TableRow orders={orders} order={order} key={order.id} setOrders={setOrders} />
   }) 
 
   return (

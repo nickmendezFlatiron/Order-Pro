@@ -1,12 +1,12 @@
 import { React , useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const TableRow = ({order}) => {
+const TableRow = ({order , setOrders, orders}) => {
 
   const {name , date , number , items , fulfilled , id} = order
   const [toggleFulfillment , onToggleFulfillment] = useState(fulfilled)
 
-  function handleFulfillmentStatus(e) {
+  function handleFulfillmentStatus() {
     
     const isFulfilled = toggleFulfillment ? false : true ;
     onToggleFulfillment((toggleFulfillment) => !toggleFulfillment)
@@ -17,7 +17,12 @@ const TableRow = ({order}) => {
       body : JSON.stringify({fulfilled : isFulfilled})
     })
       .then(r => r.json())
-      .then(console.log(toggleFulfillment))
+      .then(updatedOrder => {
+        const updatedArray = orders.filter(order => order.id !== updatedOrder.id )
+        updatedArray.push(updatedOrder)
+        setOrders(updatedArray)
+        }
+      )
   }
 
   const rowColor = toggleFulfillment ? "fulfilled" : "unfulfilled" ;
@@ -34,8 +39,8 @@ const TableRow = ({order}) => {
       <td>{name}</td>
       <td>{itemCount} Items</td>
       <td>
-        <input type="checkbox" id={`${id}-check`} checked={toggleFulfillment} onChange={(e) => handleFulfillmentStatus(e)}></input> &nbsp;
-        <label for={`${id}-check`}> {toggleFulfillment ? "Fulfilled" : 'Unfulfilled'}</label>
+        <input type="checkbox" id={`${id}-check`} checked={toggleFulfillment} onChange={() => handleFulfillmentStatus()}></input> &nbsp;
+        <label > {toggleFulfillment ? "Fulfilled" : 'Unfulfilled'}</label>
       </td>
     </tr>
   )

@@ -3,7 +3,8 @@ import {Form , Container , Col , Row , Button} from 'react-bootstrap'
 
 const OrderForm = ({orders , setOrders }) => {
 
-  const [orderNumber , setOrderNumber] = useState('')
+  const lastOrder = orders[orders.length - 1].number
+  const [orderNumber , setOrderNumber] = useState(lastOrder + 1)
   
 
   const [name , setName] = useState('')
@@ -57,8 +58,8 @@ const OrderForm = ({orders , setOrders }) => {
     setEmail('')
     setDate('')
     setItems('')
-
     setOrderNumber(orderNumber => orderNumber + 1)
+
   }
 
 

@@ -21,7 +21,7 @@ const TableRow = ({order}) => {
 
   const rowColor = toggleFulfillment ? "fulfilled" : "unfulfilled" ;
 
-  const itemCount = items.split(",").length
+  const itemCount = items.length
 
   const splitdate = date.split("-")
   const newDate = `${splitdate[1]}/${splitdate[2]}/${splitdate[0]}`

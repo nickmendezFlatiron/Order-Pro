@@ -11,11 +11,13 @@ const OrderTable = ({orders , setOrders , search , filter}) => {
 
   const defaultSort = filter === "default" ? orders : specialSort ;
   
-  const searchFilter = defaultSort.filter( order => 
-    order.name.toLowerCase().includes(search.toLowerCase()) || 
-    order.items.item_1.toLowerCase().includes(search.toLowerCase()) 
+  const searchFilter = defaultSort.filter( order => { 
+    const orderString = order.items.join(',')
+    
+   return (order.name.toLowerCase().includes(search.toLowerCase())) || 
+   orderString.toLowerCase().includes(search.toLowerCase())}
   ) 
-
+  
   const tableRows = searchFilter.map(order => {
    return <TableRow order={order} key={order.id} setOrders={setOrders} />
   }) 

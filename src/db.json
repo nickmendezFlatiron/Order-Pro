@@ -5,7 +5,11 @@
       "email": "john@email.com",
       "date": "2022-04-01",
       "number": 1003,
-      "items": "3 shirts , 2 tables, 1 bag of soil",
+      "items": [
+        "3 shirts",
+        "2 tables",
+        "1 bag of soil"
+      ],
       "fulfilled": true,
       "id": 1
     },
@@ -14,7 +18,11 @@
       "email": "good@email.com",
       "date": "2022-04-01",
       "number": 1004,
-      "items":"slippers , shorts , gym bag",
+      "items": [
+        "slippers",
+        "shorts",
+        "gym bag"
+      ],
       "fulfilled": true,
       "id": 2
     },
@@ -23,7 +31,10 @@
       "email": "amy@email.com",
       "date": "2022-04-01",
       "number": 1005,
-      "items": "tea , crumpets",
+      "items": [
+        "tea",
+        "crumpets"
+      ],
       "fulfilled": false,
       "id": 3
     },
@@ -32,7 +43,12 @@
       "email": "jimmy@email.com",
       "date": "2022-04-01",
       "number": 1006,
-      "items": "socks , tea , greeting card , teddy bear",
+      "items": [
+        "socks",
+        "tea",
+        "greeting card",
+        "teddy bear"
+      ],
       "fulfilled": false,
       "id": 4
     },
@@ -41,7 +57,9 @@
       "email": "nicholasmendez10@gmail.com",
       "date": "2022-04-01",
       "number": 1007,
-      "items": "2 sandwiches" ,
+      "items": [
+        "2 sandwiches"
+      ],
       "fulfilled": false,
       "id": 5
     },
@@ -50,7 +68,9 @@
       "email": "info@everydaycarryny.com",
       "date": "2022-04-14",
       "number": 1008,
-      "items": "hello test",
+      "items": [
+        "hello test"
+      ],
       "fulfilled": false,
       "id": 6
     },
@@ -59,9 +79,26 @@
       "email": "test@email.com",
       "date": "2022-04-09",
       "number": 1009,
-      "items":  "2 Lotkas ,3 Teas",
+      "items": [
+        "2 Lotkas",
+        "3 Teas"
+      ],
       "fulfilled": false,
       "id": 7
+    },
+    {
+      "name": "Test Name 2",
+      "email": "customertest@gmail.com",
+      "date": "2022-04-13",
+      "number": 1010,
+      "items":  [
+          "3 T shirts ",
+          " 4 Shorts ",
+          " 2 pants"
+        ]
+      ,
+      "fulfilled": false,
+      "id": 8
     }
   ]
 }

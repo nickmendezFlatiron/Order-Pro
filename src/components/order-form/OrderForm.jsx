@@ -13,7 +13,6 @@ const OrderForm = ({orders , setOrders }) => {
   const lastOrder = orders[orders.length - 1]
 
   useEffect(() =>{
-    console.log(lastOrder)
     setOrderNumber(() => lastOrder.number + 1)
   } ,[])
   
@@ -26,26 +25,24 @@ const OrderForm = ({orders , setOrders }) => {
   }
 
   function handleDate(event) {
-  
   setDate(event.target.value)
-    
   }
 
-  function handleItems(event) {
-    setItems(event.target.value)
-
+  function handleItems(event) {  
+    const itemArray = event.target.value.split(',')
+    setItems(itemArray)
   }
 
   function handleSubmit(event){
 
     event.preventDefault()
-    console.log('ive been submitted')
-    const newOrder = {
+    // console.log('ive been submitted')
+      const newOrder = {
       name : name ,
       email : email ,
       date : date ,
       number : orderNumber ,
-      items : {item_1 : items} ,
+      items : items ,
       fulfilled : false
     }
 
@@ -65,6 +62,8 @@ const OrderForm = ({orders , setOrders }) => {
 
     setOrderNumber(orderNumber => orderNumber + 1)
   }
+
+
   return (
     <Container className="justify-content-around formbg">
       <div className="my-5 py-3">

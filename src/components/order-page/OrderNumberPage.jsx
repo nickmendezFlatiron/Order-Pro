@@ -29,21 +29,25 @@ const OrderNumberPage = ({orders}) => {
           </Col>
         </Row>
        <Container className="mt-5 d-inline-flex flex-row  justify-content-around">
-          
-          <Card style={{ width: '30rem' }} >
-            <Card.Header><strong>Items Purchased</strong></Card.Header>
-            <ListGroup variant="flush">
-              {productList}
-            </ListGroup>
-          </Card>
-          
-          <Card>
+          <Col sm={9}>
+            <Card style={{ width: '30rem' }} >
+              <Card.Header><strong>Items Purchased</strong></Card.Header>
+              <ListGroup variant="flush">
+                {productList}
+              </ListGroup>
+            </Card>
+          </Col>
+         
+          <Col sm={3}>
+          <Card >
             <Card.Header><strong>Customer Information</strong></Card.Header>
             <ListGroup>
               <ListGroupItem>{orderInfo.name}</ListGroupItem>
               <ListGroupItem>{orderInfo.email}</ListGroupItem>
             </ListGroup>
           </Card>
+          </Col>
+          
         </Container>
       </Container>
   )

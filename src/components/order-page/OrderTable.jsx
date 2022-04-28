@@ -11,7 +11,10 @@ const OrderTable = ({orders , setOrders , search , filter}) => {
 
   const defaultSort = filter === "default" ? orders : specialSort ;
   
-  const searchFilter = defaultSort.filter(order => order.name.includes(search) || order.items.item_1.includes(search) ) 
+  const searchFilter = defaultSort.filter( order => 
+    order.name.toLowerCase().includes(search.toLowerCase()) || 
+    order.items.item_1.toLowerCase().includes(search.toLowerCase()) 
+  ) 
 
   const tableRows = searchFilter.map(order => {
    return <TableRow order={order} key={order.id} setOrders={setOrders} />
@@ -19,8 +22,8 @@ const OrderTable = ({orders , setOrders , search , filter}) => {
 
   return (
     <Container>
-      <Table hover className="my-3 bordered shadow-sm">
-        <thead className="mt-3">
+      <Table hover className="my-3 shadow " id="order-table">
+        <thead className="mt-3 bg-opacity-25 bg-info">
           <th>Order #</th>
           <th>Date</th>
           <th>Customer</th>

@@ -44,3 +44,12 @@ tr.fulfilled {
   color: rgba(144, 144, 144, 0.852);
 }
 
+#order-table {
+  border-collapse: collapse;
+    width: 100%;
+    border-radius: 15px;
+  border-radius: 15px;
+  text-align: left;
+  box-shadow: 0px 0px 10px rgba(114, 114, 113, 0.5);
+}
+

@@ -10,7 +10,7 @@
         "item_2": "t shirt",
         "item_3": "socks"
       },
-      "fulfilled": false,
+      "fulfilled": true,
       "id": 1
     },
     {
@@ -49,7 +49,7 @@
         "item_3": "greeting card",
         "item_4": "teddy bear"
       },
-      "fulfilled": true,
+      "fulfilled": false,
       "id": 4
     },
     {
@@ -60,7 +60,7 @@
       "items": {
         "item_1": "2 Sandwiches"
       },
-      "fulfilled": true,
+      "fulfilled": false,
       "id": 5
     },
     {

@@ -23,7 +23,7 @@
         "shorts",
         "gym bag"
       ],
-      "fulfilled": false,
+      "fulfilled": true,
       "id": 2
     },
     {
@@ -49,7 +49,7 @@
         "greeting card",
         "teddy bear"
       ],
-      "fulfilled": false,
+      "fulfilled": true,
       "id": 4
     },
     {
@@ -83,7 +83,7 @@
         "2 Lotkas",
         "3 Teas"
       ],
-      "fulfilled": false,
+      "fulfilled": true,
       "id": 7
     },
     {

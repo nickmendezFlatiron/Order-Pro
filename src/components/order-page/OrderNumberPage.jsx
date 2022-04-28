@@ -1,23 +1,51 @@
-import {React , useEffect , useState} from 'react'
+import {React} from 'react'
 import { useParams , Link } from 'react-router-dom'
-import Button from 'react-bootstrap/Button'
+import {Button , Row , Container, Col , Card , ListGroup  , ListGroupItem } from 'react-bootstrap/'
+
 
 const OrderNumberPage = ({orders}) => {
 
   const params= useParams()
+
   const order = orders.filter(order => order.number === parseInt(params.orderNumber))
-  console.log("orders ", order[0].number)
+  const orderInfo = order[0]
   
-  const [orderInfo , setOrderInfo] = useState(order)
 
-
-    
+  const splitdate = orderInfo.date.split("-")
+  const newDate = `${splitdate[1]}/${splitdate[2]}/${splitdate[0]}`
+  
+  const productList = orderInfo.items.map(item => { return <ListGroupItem key={item}>{item}</ListGroupItem>})
   
   return (
-    <div>
-       <Button as={Link} to="/orders" exact variant="info" className="btn-lg text-wrap text-black-50">Back</Button>
-       <p>{orderInfo[0].number}</p>
-    </div>
+      <Container className="mx-auto mt-5">
+        <Row>
+          <Col sm={1}>
+            <Button as={Link} to="/orders" exact variant="info" className="btn-lg text-wrap text-black-50">Back</Button>
+          </Col>
+          <Col sm={11} className="d-flex align-items-center">
+            <h1 className="text-left">{orderInfo.number}</h1>
+            <h4 className="ms-3 text-secondary">{newDate}</h4>
+            <h4 className="ms-3  text-secondary">{orderInfo.fulfilled ? 'Fulfilled' : 'Unfulfilled'}</h4>
+          </Col>
+        </Row>
+       <Container className="mt-5 d-inline-flex flex-row  justify-content-around">
+          
+          <Card style={{ width: '30rem' }} >
+            <Card.Header><strong>Items Purchased</strong></Card.Header>
+            <ListGroup variant="flush">
+              {productList}
+            </ListGroup>
+          </Card>
+          
+          <Card>
+            <Card.Header><strong>Customer Information</strong></Card.Header>
+            <ListGroup>
+              <ListGroupItem>{orderInfo.name}</ListGroupItem>
+              <ListGroupItem>{orderInfo.email}</ListGroupItem>
+            </ListGroup>
+          </Card>
+        </Container>
+      </Container>
   )
 }
 

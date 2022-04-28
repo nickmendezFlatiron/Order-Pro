@@ -21,7 +21,7 @@ const SearchBar = ({setSearch , setFilter , search}) => {
       <FormControl aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder='Enter search quiery here...' value={search} onChange={handleSearch}/>
       <InputGroup.Text id="inputGroup-sizing-lg">
         <label for="filter" className="text-secondary" >Sort&nbsp;&nbsp;</label>
-        <select name="filter" class="form-select" onChange={handleFilter}>
+        <select name="filter" className="form-select" onChange={handleFilter}>
         <option value="default">Default</option>
           <option value="byName">By Name</option>
           <option value="descending">Descending</option>

@@ -1,7 +1,7 @@
 import React from 'react'
 import {Container , Table} from 'react-bootstrap'
 import TableRow from './TableRow'
-import OrderNumberPage from './OrderNumberPage'
+
 
 
 const OrderTable = ({orders , setOrders , search , filter}) => {
@@ -28,11 +28,13 @@ const OrderTable = ({orders , setOrders , search , filter}) => {
     <Container>
       <Table hover className="my-3 shadow " id="order-table">
         <thead className="mt-3 bg-opacity-25 bg-info">
-          <th>Order #</th>
-          <th>Date</th>
-          <th>Customer</th>
-          <th>Items</th>
-          <th>Status</th>
+          <tr>
+            <th>Order #</th>
+            <th>Date</th>
+            <th>Customer</th>
+            <th>Items</th>
+            <th>Status</th>
+          </tr>
         </thead>
         <tbody>
           {tableRows}

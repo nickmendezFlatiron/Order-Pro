@@ -1,13 +1,21 @@
-import {React ,  useState} from "react";
+import {React ,  useState , useEffect} from "react";
 import {Form , Container , Col , Row , Button} from 'react-bootstrap'
 
 const OrderForm = ({orders , setOrders }) => {
-  const [orderNumber , setOrderNumber] = useState(1)
+
+  const [orderNumber , setOrderNumber] = useState(0)
 
   const [name , setName] = useState('')
   const [email , setEmail] = useState('')
   const [date , setDate] = useState('')
   const [items , setItems] = useState('')
+
+  const lastOrder = orders[orders.length - 1]
+
+  useEffect(() =>{
+    console.log(lastOrder)
+    setOrderNumber(() => lastOrder.number + 1)
+  } ,[])
   
   function handleName(event){
     setName(event.target.value)
@@ -54,11 +62,13 @@ const OrderForm = ({orders , setOrders }) => {
     setEmail('')
     setDate('')
     setItems('')
+
+    setOrderNumber(orderNumber => orderNumber + 1)
   }
   return (
     <Container className="justify-content-around formbg">
       <div className="my-5 py-3">
-        <h1 className="font-60 text-center font-face-cl bg-light bg-opacity-50 text-black" id="new-order"><strong>NEW ORDER</strong></h1>
+        <h1 className="font-60 text-center font-face-cl bg-info bg-opacity-75 text-dark-50" id="new-order"><strong>NEW ORDER</strong></h1>
       </div>
       <Form className="mx-auto w-75 shadow rounded-3 bg-light bg-opacity-75" onSubmit={handleSubmit}>
         <Row className="my-3">
@@ -85,7 +95,7 @@ const OrderForm = ({orders , setOrders }) => {
           <Col>
             <Form.Group controlId="formOrderNumber">
               <Form.Label>Order Number</Form.Label>
-              <Form.Control placeholder={orderNumber} disabled/>
+              <Form.Control placeholder={orderNumber} disabled />
             </Form.Group>
           </Col>
         </Row>

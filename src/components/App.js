@@ -18,6 +18,9 @@ const App = () => {
   const [orders , setOrders] = useState([])
   const url = 'http://localhost:3000/orders'
 
+  const [search , setSearch] = useState('')
+  const [filter , setFilter] = useState('default')
+
   useEffect(() => {
     fetch(url)
     .then(r => r.json())
@@ -31,8 +34,8 @@ const App = () => {
             <Route exact path="/orders">
               {/* use children prop to reduce prop drilling */}
               <Orders>
-                <SearchBar orders={orders} />  
-                <OrderTable orders={orders} setOrders={setOrders} url={url}/>
+                <SearchBar orders={orders} setSearch={setSearch} setFilter={setFilter} search={search}/>  
+                <OrderTable orders={orders} setOrders={setOrders} url={url} search={search} filter={filter}/>
               </Orders>
             </Route>
             <Route exact path="/create-order">

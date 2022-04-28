@@ -23,7 +23,7 @@
         "item_2": "shorts",
         "item_3": "gym bag"
       },
-      "fulfilled": false,
+      "fulfilled": true,
       "id": 2
     },
     {
@@ -49,25 +49,25 @@
         "item_3": "greeting card",
         "item_4": "teddy bear"
       },
-      "fulfilled": false,
+      "fulfilled": true,
       "id": 4
     },
     {
       "name": "Nick Mendez",
       "email": "nicholasmendez10@gmail.com",
       "date": "2022-04-01",
-      "number": 1,
+      "number": 1007,
       "items": {
         "item_1": "2 Sandwiches"
       },
-      "fulfilled": false,
+      "fulfilled": true,
       "id": 5
     },
     {
       "name": "Tony Tuesday",
       "email": "info@everydaycarryny.com",
       "date": "2022-04-14",
-      "number": 1,
+      "number": 1008,
       "items": {
         "item_1": "Hello Test"
       },

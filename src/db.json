@@ -5,11 +5,7 @@
       "email": "john@email.com",
       "date": "2022-04-01",
       "number": 1003,
-      "items": {
-        "item_1": "shoes",
-        "item_2": "t shirt",
-        "item_3": "socks"
-      },
+      "items": "3 shirts , 2 tables, 1 bag of soil",
       "fulfilled": true,
       "id": 1
     },
@@ -18,11 +14,7 @@
       "email": "good@email.com",
       "date": "2022-04-01",
       "number": 1004,
-      "items": {
-        "item_1": "slippers",
-        "item_2": "shorts",
-        "item_3": "gym bag"
-      },
+      "items":"slippers , shorts , gym bag",
       "fulfilled": true,
       "id": 2
     },
@@ -31,10 +23,7 @@
       "email": "amy@email.com",
       "date": "2022-04-01",
       "number": 1005,
-      "items": {
-        "item_1": "tea",
-        "item_2": "crumpets"
-      },
+      "items": "tea , crumpets",
       "fulfilled": false,
       "id": 3
     },
@@ -43,12 +32,7 @@
       "email": "jimmy@email.com",
       "date": "2022-04-01",
       "number": 1006,
-      "items": {
-        "item_1": "socks",
-        "item_2": "boba tea",
-        "item_3": "greeting card",
-        "item_4": "teddy bear"
-      },
+      "items": "socks , tea , greeting card , teddy bear",
       "fulfilled": false,
       "id": 4
     },
@@ -57,9 +41,7 @@
       "email": "nicholasmendez10@gmail.com",
       "date": "2022-04-01",
       "number": 1007,
-      "items": {
-        "item_1": "2 Sandwiches"
-      },
+      "items": "2 sandwiches" ,
       "fulfilled": false,
       "id": 5
     },
@@ -68,11 +50,18 @@
       "email": "info@everydaycarryny.com",
       "date": "2022-04-14",
       "number": 1008,
-      "items": {
-        "item_1": "Hello Test"
-      },
+      "items": "hello test",
       "fulfilled": false,
       "id": 6
+    },
+    {
+      "name": "Test Name",
+      "email": "test@email.com",
+      "date": "2022-04-09",
+      "number": 1009,
+      "items":  "2 Lotkas ,3 Teas",
+      "fulfilled": false,
+      "id": 7
     }
   ]
 }

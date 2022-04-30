@@ -10,7 +10,7 @@
         "2 tables",
         "1 bag of soil"
       ],
-      "fulfilled": true,
+      "fulfilled": false,
       "id": 1
     },
     {
@@ -35,7 +35,7 @@
         "tea",
         "crumpets"
       ],
-      "fulfilled": false,
+      "fulfilled": true,
       "id": 3
     },
     {

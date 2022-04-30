@@ -1,19 +1,14 @@
-import {React ,  useState } from "react";
+import { React ,  useState } from "react";
 import {Form , Container , Col , Row , Button} from 'react-bootstrap'
 
 const OrderForm = ({orders , setOrders }) => {
-
-  const lastOrder = orders[orders.length - 1].number
-  const [orderNumber , setOrderNumber] = useState(lastOrder + 1)
+  const descendingNumbers = [...orders].sort((a , b) => {return b.number - a.number})
   
-
+  const [orderNumber , setOrderNumber] = useState(descendingNumbers[0].number + 1)
   const [name , setName] = useState('')
   const [email , setEmail] = useState('')
   const [date , setDate] = useState('')
   const [items , setItems] = useState('')
-
-  
-
   
   function handleName(event){
     setName(event.target.value)
@@ -33,19 +28,17 @@ const OrderForm = ({orders , setOrders }) => {
   }
 
   function handleSubmit(event){
-
     event.preventDefault()
-    // console.log('ive been submitted')
-      const newOrder = {
-      name : name ,
-      email : email ,
-      date : date ,
-      number : orderNumber ,
-      items : items ,
-      fulfilled : false
+
+    const newOrder = {
+    name : name ,
+    email : email ,
+    date : date ,
+    number : orderNumber ,
+    items : items ,
+    fulfilled : false
     }
-
-
+    
     fetch(`http://localhost:3000/orders` ,{
       method : 'POST' ,
       headers: { "Content-Type" : 'application/json'} ,
@@ -62,6 +55,7 @@ const OrderForm = ({orders , setOrders }) => {
 
   }
 
+  if(orders.length === 0) return <h3>Loading...</h3>
 
   return (
     <Container className="justify-content-around formbg">
@@ -73,13 +67,13 @@ const OrderForm = ({orders , setOrders }) => {
           <Col className="mt-2">
             <Form.Group controlId="formCustomerName">
               <Form.Label>Customer Name</Form.Label>
-              <Form.Control type="text" placeholder="John Doe..." value={name} onChange={handleName}/>
+              <Form.Control type="text" placeholder="John Doe..." value={name} onChange={handleName} required/>
             </Form.Group>
           </Col>
           <Col className="mt-2 ">
             <Form.Group controlId="formCustomerEmail">
               <Form.Label>Customer Email</Form.Label>
-              <Form.Control type="email" placeholder="customername@email.com" value={email} onChange={handleEmail}/>
+              <Form.Control type="email" placeholder="customername@email.com" value={email} onChange={handleEmail} required/>
             </Form.Group>
           </Col>
         </Row>
@@ -101,7 +95,7 @@ const OrderForm = ({orders , setOrders }) => {
           <Col  className="mb-2">
             <Form.Group controlId="formOrderItems" className="justify-content-center">
                 <Form.Label >Items Ordered</Form.Label>
-                <Form.Control as="textarea" placeholder="Separate items with commas ," value={items} onChange={handleItems}/>
+                <Form.Control as="textarea" placeholder="Separate items with commas ," value={items} onChange={handleItems} required/>
               </Form.Group>
           </Col>
         </Row>

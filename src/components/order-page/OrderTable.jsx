@@ -6,7 +6,7 @@ import TableRow from './TableRow'
 
 const OrderTable = ({orders , setOrders , search , filter}) => {
   
-
+  
   const descendingNumbers = [...orders].sort((a , b) => {return b.number - a.number})
   const ascendingNumbers = [...orders].sort((a , b) => {return a.number - b.number})
   const abcSort = [...orders].sort((a , b) => a.name.localeCompare(b.name))
@@ -16,7 +16,7 @@ const OrderTable = ({orders , setOrders , search , filter}) => {
   
   const searchFilter = defaultSort.filter( order => { 
     const orderString = order.items.join(',')
-    debugger
+    
     
    return (order.name.toLowerCase().includes(search.toLowerCase())) || 
    orderString.toLowerCase().includes(search.toLowerCase())}

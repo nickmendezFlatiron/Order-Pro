@@ -1,10 +1,10 @@
-import { React ,  useState } from "react";
+import { React ,  useEffect,  useState } from "react";
 import {Form , Container , Col , Row , Button} from 'react-bootstrap'
 
 const OrderForm = ({orders , setOrders }) => {
-  const descendingNumbers = [...orders].sort((a , b) => {return b.number - a.number})
   
-  const [orderNumber , setOrderNumber] = useState(descendingNumbers[0].number + 1)
+  
+  const [orderNumber , setOrderNumber] = useState(0)
   const [name , setName] = useState('')
   const [email , setEmail] = useState('')
   const [date , setDate] = useState('')
@@ -55,7 +55,13 @@ const OrderForm = ({orders , setOrders }) => {
 
   }
 
-  if(orders.length === 0) return <h3>Loading...</h3>
+  useEffect(()=>{
+    const descendingNumbers = [...orders].sort((a , b) => {return b.number - a.number})
+    if(orders.length !== 0) {
+      setOrderNumber(descendingNumbers[0].number + 1)
+    }
+    console.log('useEffect running')
+  },[orders])
 
   return (
     <Container className="justify-content-around formbg">

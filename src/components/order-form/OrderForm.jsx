@@ -60,7 +60,6 @@ const OrderForm = ({orders , setOrders }) => {
     if(orders.length !== 0) {
       setOrderNumber(descendingNumbers[0].number + 1)
     }
-    console.log('useEffect running')
   },[orders])
 
   return (

@@ -4,8 +4,8 @@ import {Button , Row , Container, Col , Card , ListGroup  , ListGroupItem } from
 
 
 const OrderNumberPage = ({orders}) => {
+  
   const params= useParams()
-  console.count("order number page")
   if (orders.length === 0) return <h3>Loading...</h3>
 
   const order = orders.filter(order => order.number === parseInt(params.orderNumber))

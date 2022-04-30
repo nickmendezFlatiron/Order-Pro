@@ -1,5 +1,9 @@
 import { React ,  useEffect,  useState } from "react";
-import {Form , Container , Col , Row , Button} from 'react-bootstrap'
+import Button from 'react-bootstrap/Button'
+import Form from 'react-bootstrap/Form'
+import Container from 'react-bootstrap/Container'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
 
 const OrderForm = ({orders , setOrders }) => {
   

@@ -1,5 +1,7 @@
-import {React } from 'react';
-import {Container , InputGroup , FormControl } from 'react-bootstrap'
+import { React } from 'react';
+import FormControl  from 'react-bootstrap/FormControl'
+import Container from 'react-bootstrap/Container'
+import InputGroup from 'react-bootstrap/InputGroup'
 
 
 const SearchBar = ({setSearch , setFilter , search}) => {

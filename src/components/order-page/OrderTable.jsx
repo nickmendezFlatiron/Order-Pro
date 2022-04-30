@@ -1,5 +1,6 @@
 import React from 'react'
-import {Container , Table} from 'react-bootstrap'
+import Container  from 'react-bootstrap/Container'
+import Table from 'react-bootstrap/Table'
 import TableRow from './TableRow'
 
 

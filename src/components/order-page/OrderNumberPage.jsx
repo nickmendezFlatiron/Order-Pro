@@ -5,15 +5,16 @@ import {Button , Row , Container, Col , Card , ListGroup  , ListGroupItem } from
 
 const OrderNumberPage = ({orders}) => {
   
+  // access the orderNumber key value from the useParams object to determine which order to display
   const params= useParams()
   if (orders.length === 0) return <h3>Loading...</h3>
 
   const order = orders.filter(order => order.number === parseInt(params.orderNumber))
   const orderInfo = order[0]
   
-
-  const splitdate = orderInfo.date.split("-")
-  const newDate = `${splitdate[1]}/${splitdate[2]}/${splitdate[0]}`
+  // splits date and reformats it to MM-DD-YYYY
+  const splitDate = orderInfo.date.split("-")
+  const newDate = `${splitDate[1]}/${splitDate[2]}/${splitDate[0]}`
   
   const productList = orderInfo.items.map(item => { return <ListGroupItem key={item}>{item}</ListGroupItem>})
   

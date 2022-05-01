@@ -7,19 +7,19 @@ import TableRow from './TableRow'
 
 const OrderTable = ({orders , setOrders , search , filter}) => {
   
-  
+  // Sorting methods
   const descendingNumbers = [...orders].sort((a , b) => {return b.number - a.number})
   const ascendingNumbers = [...orders].sort((a , b) => {return a.number - b.number})
   const abcSort = [...orders].sort((a , b) => a.name.localeCompare(b.name))
-  const specialSort = filter === "descending" ? descendingNumbers : abcSort ;
 
+  //Ternary expressiong to determine how to sort , based on Filter selected
+  const specialSort = filter === "descending" ? descendingNumbers : abcSort ;
   const defaultSort = filter === "default" ? ascendingNumbers : specialSort ;
   
+  // Filter results that includes search value in  order date , customer names , or items purchased
   const searchFilter = defaultSort.filter( order => { 
     const orderString = order.items.join(',')
-    
-    
-   return (order.name.toLowerCase().includes(search.toLowerCase())) || 
+   return  order.number.toString().includes(search) || (order.name.toLowerCase().includes(search.toLowerCase())) || 
    orderString.toLowerCase().includes(search.toLowerCase())}
   ) 
   

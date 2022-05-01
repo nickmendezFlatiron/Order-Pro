@@ -11,29 +11,26 @@ const TableRow = ({order , setOrders, orders}) => {
     const isFulfilled = toggleFulfillment ? false : true ;
     onToggleFulfillment((toggleFulfillment) => !toggleFulfillment)
 
+    // Updates the fulfillment status of an order based on ID , and updates orders State
     fetch(`http://localhost:3000/orders/${id}` , {
       method : "PATCH" ,
       headers: { "Content-Type" : 'application/json'} ,
       body : JSON.stringify({fulfilled : isFulfilled})
     })
       .then(r => r.json())
-      .then(updatedOrder => {
-        const updatedArray = orders.filter(order => order.id !== updatedOrder.id )
-        updatedArray.push(updatedOrder)
-        setOrders(updatedArray)
-        }
-      )
+      .then(order.fulfilled = isFulfilled)
   }
 
   const rowColor = toggleFulfillment ? "fulfilled" : "unfulfilled" ;
-
   const itemCount = items.length
 
-  const splitdate = date.split("-")
-  const newDate = `${splitdate[1]}/${splitdate[2]}/${splitdate[0]}`
+  // splits date and reformats it to MM/DD/YYYY
+  const splitDate = date.split("-")
+  const newDate = `${splitDate[1]}/${splitDate[2]}/${splitDate[0]}`
 
   return (
     <tr className={rowColor}>
+      {/* generates an order specific link based on order number */}
       <td><Link to={`/orders/${number}`}>{number}</Link></td>
       <td>{newDate}</td>
       <td>{name}</td>

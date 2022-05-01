@@ -6,17 +6,13 @@ import InputGroup from 'react-bootstrap/InputGroup'
 
 const SearchBar = ({setSearch , setFilter , search}) => {
 
- 
-
   function handleFilter(e) {
     setFilter(e.target.value)
-    // console.log("filter: " , e.target.value)
-
   }
   function handleSearch (e) {
     setSearch(e.target.value)
-    // console.log('search: ', e.target.value)
   }
+  
   return (
    <Container>
     <InputGroup size="lg">

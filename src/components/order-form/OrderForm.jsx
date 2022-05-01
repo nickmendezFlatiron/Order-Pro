@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row'
 
 const OrderForm = ({orders , setOrders }) => {
   
-  
+  // set State for each form input
   const [orderNumber , setOrderNumber] = useState(0)
   const [name , setName] = useState('')
   const [email , setEmail] = useState('')
@@ -59,6 +59,7 @@ const OrderForm = ({orders , setOrders }) => {
 
   }
 
+  // set the order Number for the next order once the orders prop is set after the API call in parent app.js useEffect
   useEffect(()=>{
     const descendingNumbers = [...orders].sort((a , b) => {return b.number - a.number})
     if(orders.length !== 0) {
@@ -67,6 +68,7 @@ const OrderForm = ({orders , setOrders }) => {
   },[orders])
 
   return (
+    // require each input from user
     <Container className="justify-content-around formbg">
       <div className="my-5 py-3">
         <h1 className="font-60 text-center font-face-cl bg-info bg-opacity-75 text-dark-50" id="new-order"><strong>NEW ORDER</strong></h1>

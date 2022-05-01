@@ -6,20 +6,20 @@ Easily create , manage,  search , and fulfill orders from a simple interface.
 ## Pages/Routes
  ***Note*** : each page features a navigation bar , which features links to the main pages
 ### 1.  Home Page
-![Home Page] ('./src/assets/readme/homepage.png')
+![Home Page] ('https://github.com/nickmendezFlatiron/Order-Pro/blob/main/src/assets/readme/homepage.png')
   - The homepage features an introduction to Order Pro 
   - 
 ### 2. My Orders Page
-![Orders Page] ('./src/assets/readme/my-orders-page.png')
+![Orders Page] ('https://github.com/nickmendezFlatiron/Order-Pro/blob/main/src/assets/readme/my-orders-page.png')
   - This page displays a table of all user generated orders 
   - The searchbar allows users to search by order number, date , customer name , or item name
 ### 3. Create Order Page
-![Create Order Page] ('./src/assets/readme/create-order-page.png')
+![Create Order Page] ('https://github.com/nickmendezFlatiron/Order-Pro/blob/main/src/assets/readme/create-order-page.png')
   - Create a new order by filling out the form
     - each is input required 
     - order numbers are generated automatically , no order number is repeated
 ### 4. Order Number 
-![Order Number Page] ('./src/assets/readme/order-number-page.png')
+![Order Number Page] ('https://github.com/nickmendezFlatiron/Order-Pro/blob/main/src/assets/readme/order-number-page.png')
   - Each order number page is generated when a new order is submitted
   - Access all order-specific information from this page
   - all order number pages follow the same url structure

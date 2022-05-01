@@ -1,12 +1,32 @@
 # Order Pro
 ### Overview 
 __Order Pro__ is an order management tool for retail/commerce businesses. 
-Easily create , search , and fulfill orders from a simple interface.
+Easily create , manage,  search , and fulfill orders from a simple interface.
 
+## Pages/Routes
+ ***Note*** : each page features a navigation bar , which features links to the main pages
+### 1.  Home Page
+![Home Page] ('./src/assets/readme/homepage.png')
+  - The homepage features an introduction to Order Pro 
+  - 
+### 2. My Orders Page
+![Orders Page] ('./src/assets/readme/my-orders-page.png')
+  - This page displays a table of all user generated orders 
+  - The searchbar allows users to search by order number, date , customer name , or item name
+### 3. Create Order Page
+![Create Order Page] ('./src/assets/readme/create-order-page.png')
+  - Create a new order by filling out the form
+    - each is input required 
+    - order numbers are generated automatically , no order number is repeated
+### 4. Order Number 
+![Order Number Page] ('./src/assets/readme/order-number-page.png')
+  - Each order number page is generated when a new order is submitted
+  - Access all order-specific information from this page
+  - all order number pages follow the same url structure
 ### Requirements
 * Node 16.14.2
-* react-bootstrap 2.3.0 (Bootstrap 5)
-* 
+* React Bootstrap 2.3.0 (Bootstrap 5)
+* React Router
 
 ### Installation and Setup
 * Fork and clone 
@@ -15,11 +35,13 @@ Easily create , search , and fulfill orders from a simple interface.
   - if you'd like to customize the Bootstrap Sass files , then install Vanilla Bootstrap
     - npm install bootstrap
 * open another command terminal and access the src file
- - run json-server --watch db.json 
+ - run json-server --watch db.json to setup localhost database
 * run npm start
 
+## Contributors
+- [Nick Mendez (Me)](https://github.com/nickmendezFlatiron)
 ### License - 3-Clause BSD License
-*Copyright <2022> <COPYRIGHT Nicholas Mendez - nickmendezFlatiron>
+*Copyright <2022> <COPYRIGHT Nicholas Mendez - github: nickmendezFlatiron>
 
 *Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 

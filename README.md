@@ -8,11 +8,11 @@ Easily create , manage,  search , and fulfill orders from a simple interface.
 ### 1.  Home Page
 ![Home Page](https://github.com/nickmendezFlatiron/Order-Pro/blob/main/src/assets/readme/homepage.png)
   - The homepage features an introduction to Order Pro 
-  - 
 ### 2. My Orders Page
 ![Orders Page](https://github.com/nickmendezFlatiron/Order-Pro/blob/main/src/assets/readme/my-orders-page.png)
   - This page displays a table of all user generated orders 
   - The searchbar allows users to search by order number, date , customer name , or item name
+  - Update the fulfillment status of an order
 ### 3. Create Order Page
 ![Create Order Page](https://github.com/nickmendezFlatiron/Order-Pro/blob/main/src/assets/readme/create-order-page.png)
   - Create a new order by filling out the form

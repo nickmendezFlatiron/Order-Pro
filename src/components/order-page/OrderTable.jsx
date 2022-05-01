@@ -16,10 +16,10 @@ const OrderTable = ({orders , setOrders , search , filter}) => {
   const specialSort = filter === "descending" ? descendingNumbers : abcSort ;
   const defaultSort = filter === "default" ? ascendingNumbers : specialSort ;
   
-  // Filter results that includes search value in  order date , customer names , or items purchased
+  // Filter orders by search value included in order date , order number , customer names , or items purchased
   const searchFilter = defaultSort.filter( order => { 
     const orderString = order.items.join(',')
-   return  order.number.toString().includes(search) || (order.name.toLowerCase().includes(search.toLowerCase())) || 
+   return  order.number.toString().includes(search) || order.date.includes(search) || (order.name.toLowerCase().includes(search.toLowerCase())) || 
    orderString.toLowerCase().includes(search.toLowerCase())}
   ) 
   

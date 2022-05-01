@@ -26,7 +26,7 @@ const TableRow = ({order , setOrders, orders}) => {
 
   // splits date and reformats it to MM/DD/YYYY
   const splitDate = date.split("-")
-  const newDate = `${splitDate[1]}/${splitDate[2]}/${splitDate[0]}`
+  const newDate = `${splitDate[1]}-${splitDate[2]}-${splitDate[0]}`
 
   return (
     <tr className={rowColor}>

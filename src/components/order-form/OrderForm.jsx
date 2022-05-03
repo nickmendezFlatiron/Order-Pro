@@ -73,7 +73,7 @@ const OrderForm = ({orders , setOrders }) => {
       <div className="my-5 py-3">
         <h1 className="font-60 text-center font-face-cl bg-info bg-opacity-75 text-dark-50" id="new-order"><strong>NEW ORDER</strong></h1>
       </div>
-      <Form className="mx-auto w-75 shadow rounded-3 bg-light bg-opacity-75" onSubmit={handleSubmit}>
+      <Form className="padding mx-auto w-75 shadow rounded-3 bg-light bg-opacity-75" onSubmit={handleSubmit}>
         <Row className="my-3">
           <Col className="mt-2">
             <Form.Group controlId="formCustomerName">

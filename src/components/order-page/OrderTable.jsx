@@ -29,7 +29,7 @@ const OrderTable = ({orders , setOrders , search , filter}) => {
 
   return (
     <Container>
-      <Table hover className="my-3 shadow " id="order-table">
+      <Table hover className="my-3 shadow padding" id="order-table">
         <thead className="mt-3 bg-opacity-25 bg-info">
           <tr>
             <th>Order #</th>

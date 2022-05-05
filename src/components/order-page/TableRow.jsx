@@ -1,7 +1,7 @@
 import { React , useState } from 'react'
 import  Link  from 'react-router-dom/Link'
 
-const TableRow = ({order , setOrders, orders}) => {
+const TableRow = ({order}) => {
 
   const {name , date , number , items , fulfilled , id} = order
   const [toggleFulfillment , onToggleFulfillment] = useState(fulfilled)

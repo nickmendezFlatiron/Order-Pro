@@ -17,13 +17,14 @@ import '../fonts/Cocogoose-Ultralight.ttf'
 
 const App = () => {
 
+  // array of orders from db.json
   const [orders , setOrders] = useState([])
   const url = 'http://localhost:3000/orders'
   
-
+  // search bar input and filter value
   const [search , setSearch] = useState('')
   const [filter , setFilter] = useState('default')
-
+ 
   useEffect(() => {
     fetch(url)
     .then(r => r.json())

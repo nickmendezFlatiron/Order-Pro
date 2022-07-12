@@ -13,13 +13,21 @@ const OrderForm = ({orders , setOrders }) => {
   const [email , setEmail] = useState('')
   const [date , setDate] = useState('')
   const [items , setItems] = useState('')
+
   
   function handleName(event){
-    setName(event.target.value)
+    const characters = event.target.value
+    if(characters.length <= 10){
+      setName(event.target.value)
+    }
   }
 
   function handleEmail(event){
-    setEmail(event.target.value)
+    
+    const characters = event.target.value
+    if(characters.length <= 20){
+      setEmail(event.target.value)
+    }
   }
 
   function handleDate(event) {
@@ -49,7 +57,7 @@ const OrderForm = ({orders , setOrders }) => {
       body : JSON.stringify(newOrder)
     })
     .then(r => r.json())
-    .then(() => {setOrders([...orders , newOrder ])})
+    .then((order) => {setOrders([...orders , order ])})
 
     setName('')
     setEmail('')
@@ -79,12 +87,14 @@ const OrderForm = ({orders , setOrders }) => {
             <Form.Group controlId="formCustomerName">
               <Form.Label>Customer Name</Form.Label>
               <Form.Control type="text" placeholder="John Doe..." value={name} onChange={handleName} required/>
+              <Form.Text>{`${10 - name.length} characters remaining`}</Form.Text>
             </Form.Group>
           </Col>
           <Col className="mt-2 ">
             <Form.Group controlId="formCustomerEmail">
               <Form.Label>Customer Email</Form.Label>
               <Form.Control type="email" placeholder="customername@email.com" value={email} onChange={handleEmail} required/>
+              <Form.Text>{`${20 - email.length} characters remaining`}</Form.Text>
             </Form.Group>
           </Col>
         </Row>

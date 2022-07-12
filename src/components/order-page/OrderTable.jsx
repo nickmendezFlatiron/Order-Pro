@@ -18,6 +18,7 @@ const OrderTable = ({orders , setOrders , search , filter}) => {
   
   // Filter orders by search value included in order date , order number , customer names , or items purchased
   const searchFilter = defaultSort.filter( order => { 
+    // returns a string of the order items
     const orderString = order.items.join(',')
    return  order.number.toString().includes(search) || order.date.includes(search) || (order.name.toLowerCase().includes(search.toLowerCase())) || 
    orderString.toLowerCase().includes(search.toLowerCase())}

@@ -5,7 +5,7 @@ import InputGroup from 'react-bootstrap/InputGroup'
 
 
 const SearchBar = ({setSearch , setFilter , search}) => {
-
+  // searchbar input acts as a controlled form , getting it's input from state
   function handleFilter(e) {
     setFilter(e.target.value)
   }
